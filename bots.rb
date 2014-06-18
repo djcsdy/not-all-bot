@@ -52,8 +52,7 @@ Ebooks::Bot.new("NotAllBot") do |bot|
   raise "Invalid oauth_token_secret" unless bot.oauth_token_secret
 
   bot.on_follow do |user|
-    # Follow a user back
-    # bot.follow(user[:screen_name])
+    bot.follow user.screen_name
   end
 
   bot.on_mention do |tweet, meta|
